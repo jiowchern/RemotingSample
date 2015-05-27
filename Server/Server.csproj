@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D82BD297-F746-4322-A342-DA9C91779F35}</ProjectGuid>
+    <ProjectGuid>{6DA36CE1-F55E-4A31-9B25-848735D98F93}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestClient</RootNamespace>
-    <AssemblyName>TestClient</AssemblyName>
+    <RootNamespace>Server</RootNamespace>
+    <AssemblyName>Server</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,25 +32,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="INIFileParser">
-      <HintPath>..\Library\INIFileParser.dll</HintPath>
-    </Reference>
-    <Reference Include="protobuf-net">
+    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Library\protobuf-net.dll</HintPath>
     </Reference>
-    <Reference Include="RegulisLibrary">
-      <HintPath>..\Library\RegulisLibrary.dll</HintPath>
+    <Reference Include="RegulusLibrary, Version=1.0.5620.42775, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\RegulusLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="Remoting">
-      <HintPath>..\Library\Remoting.dll</HintPath>
+    <Reference Include="RegulusRemoting, Version=1.0.5625.24017, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\RegulusRemoting.dll</HintPath>
     </Reference>
-    <Reference Include="RemotingNativeGhost">
-      <HintPath>..\Library\RemotingNativeGhost.dll</HintPath>
+    <Reference Include="RegulusRemotingNativeSoul, Version=1.0.5625.24017, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\RegulusRemotingNativeSoul.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -63,12 +65,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{1107d37e-8938-4615-ba41-829de5284715}</Project>
+      <Project>{0be917ba-6deb-4db7-95a8-c651091fb3e7}</Project>
       <Name>Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\User\User.csproj">
-      <Project>{bff03972-e6c3-46b7-8822-db599950fe36}</Project>
-      <Name>User</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
