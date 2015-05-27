@@ -19,18 +19,12 @@ namespace Client
             this._Agent = agent;
             this._View = view;
             this._Command = command;
-        }
-        internal void Shutdown()
-        {
-            _Agent.Connect("127.0.0.1", 12345).OnValue -= _ConnectResult;
-            _Agent.QueryNotifier<Custom.ISample>().Supply -= _GetSample;
-        }
-        internal void Launch()
-        {
+
             _View.WriteLine("開始連線...");
             _Agent.Connect("127.0.0.1", 12345).OnValue += _ConnectResult;
             _Agent.QueryNotifier<Custom.ISample>().Supply += _GetSample;
-        }
+
+        }        
 
         void _GetSample(Custom.ISample sample)
         {

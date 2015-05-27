@@ -17,6 +17,10 @@ namespace Server
             var console = new Regulus.Utility.Console(input,view);
 
             // 建立伺服器
+            // 參數1 : 您的自定應用程式邏輯
+            //         該物件需要繼承Regulus.Remoting.ICore 
+            //
+            // 參數2 : 監聽連線的Port
             var server = new Regulus.Remoting.Soul.Native.Server(new Custom.Appliction(view), 12345);
 
             bool enable = true;
@@ -24,7 +28,7 @@ namespace Server
             console.Command.Register("quit", () => { enable = false; });
 
 
-            // 啟動伺服器，開啟Port 12345            
+            // 啟動伺服器，開啟Port            
             // 與使用者自定義的物件互動(Custom.Appliction)
             server.Launch();
 
