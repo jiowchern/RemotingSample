@@ -31,16 +31,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Library\protobuf-net.dll</HintPath>
+      <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="RegulusLibrary, Version=1.0.5620.42775, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Library\RegulusLibrary.dll</HintPath>
+    <Reference Include="RegulusLibrary, Version=1.0.5625.27390, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RegulusLibrary.0.0.8\lib\net35\RegulusLibrary.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="RegulusRemoting, Version=1.0.5625.24017, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Library\RegulusRemoting.dll</HintPath>
+    <Reference Include="RegulusRemoting, Version=1.0.5625.27390, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RegulusRemoting.0.0.10\lib\net35\RegulusRemoting.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -55,6 +55,9 @@
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sample.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
