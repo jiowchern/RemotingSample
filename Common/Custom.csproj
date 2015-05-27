@@ -7,8 +7,8 @@
     <ProjectGuid>{0BE917BA-6DEB-4DB7-95A8-C651091FB3E7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Common</RootNamespace>
-    <AssemblyName>Common</AssemblyName>
+    <RootNamespace>Custom</RootNamespace>
+    <AssemblyName>Custom</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ISubtractor.cs" />
-    <Compile Include="Main.cs" />
+    <Compile Include="Appliction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sample.cs" />
   </ItemGroup>

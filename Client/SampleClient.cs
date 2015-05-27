@@ -12,7 +12,7 @@ namespace Client
         private Regulus.Utility.Command _Command;
 
         Regulus.Utility.TimeCounter _Counter;
-        Common.ISample _Sample;
+        Custom.ISample _Sample;
         public SampleClient(Regulus.Remoting.IAgent agent, Regulus.Utility.Console.IViewer view, Regulus.Utility.Command command)
         {
             _Counter = new Regulus.Utility.TimeCounter();
@@ -23,16 +23,16 @@ namespace Client
         internal void Shutdown()
         {
             _Agent.Connect("127.0.0.1", 12345).OnValue -= _ConnectResult;
-            _Agent.QueryNotifier<Common.ISample>().Supply -= _GetSample;
+            _Agent.QueryNotifier<Custom.ISample>().Supply -= _GetSample;
         }
         internal void Launch()
         {
             _View.WriteLine("開始連線...");
             _Agent.Connect("127.0.0.1", 12345).OnValue += _ConnectResult;
-            _Agent.QueryNotifier<Common.ISample>().Supply += _GetSample;
+            _Agent.QueryNotifier<Custom.ISample>().Supply += _GetSample;
         }
 
-        void _GetSample(Common.ISample sample)
+        void _GetSample(Custom.ISample sample)
         {
             _View.WriteLine("取得Sample...");
             sample.Add(1, 2).OnValue += (result) => { _View.WriteLine(string.Format("Add(1 , 2) == {0}", result)); };
@@ -44,7 +44,7 @@ namespace Client
 
         }
 
-        private void _GetSubtractor(Common.ISubtractor subtractor)
+        private void _GetSubtractor(Custom.ISubtractor subtractor)
         {
             _View.WriteLine("取得Subtractor...");
             subtractor.Sub(1, 2).OnValue += (result) => { _View.WriteLine(string.Format("Sub(1 , 2) == {0}", result)); };

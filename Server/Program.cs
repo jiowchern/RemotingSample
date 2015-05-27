@@ -17,17 +17,24 @@ namespace Server
             var console = new Regulus.Utility.Console(input,view);
 
             // 建立伺服器
-            var server = new Regulus.Remoting.Soul.Native.Server(new Common.Main(view), 12345);
+            var server = new Regulus.Remoting.Soul.Native.Server(new Custom.Appliction(view), 12345);
 
             bool enable = true;
+            // 註冊關閉命令給Command
             console.Command.Register("quit", () => { enable = false; });
 
+
+            // 啟動伺服器，開啟Port 12345            
+            // 與使用者自定義的物件互動(Custom.Appliction)
             server.Launch();
 
             while(enable)
             {
+                // 按鍵訊息刷新
                 input.Update();
             }
+
+            //關閉伺服器
             server.Shutdown();
         }
     }

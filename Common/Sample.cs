@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common
+namespace Custom
 {
-
     /// <summary>
     /// 展示用遠端物件
     /// 目前版本提供的所有支援類型
