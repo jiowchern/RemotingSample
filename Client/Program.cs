@@ -26,6 +26,7 @@ namespace Client
 
             // 自定義的客戶端邏輯
             var client = new SampleClient(agent, view, console.Command);
+            
             while (enable)
             {                
                 // 代理器更新

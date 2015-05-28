@@ -28,7 +28,7 @@ namespace Server
             console.Command.Register("quit", () => { enable = false; });
 
 
-            // 啟動伺服器，開啟Port            
+            // 設定伺服器端口        
             // 與使用者自定義的物件互動(Custom.Appliction)
             server.Launch();
 

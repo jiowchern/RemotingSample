@@ -53,9 +53,6 @@ namespace Client
             else
                 _View.WriteLine("連線失敗.");
         }
-
-        
-
         
     }
 }
