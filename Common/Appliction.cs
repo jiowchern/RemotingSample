@@ -36,7 +36,7 @@ namespace Custom
         }
 
         // 如果有使用者連線進來則會呼叫此方法
-        void Regulus.Remoting.ICore.ObtainBinder(Regulus.Remoting.ISoulBinder binder)
+        void Regulus.Remoting.ICore.AssignBinder(Regulus.Remoting.ISoulBinder binder)
         {
 
             // 綁定_SampleClass客戶端將會收到Custom.ISample實體            
