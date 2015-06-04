@@ -11,8 +11,6 @@ namespace Server
         static void Main(string[] args)
         {
 
-            AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
-
             // 展示用簡易控制台
             var view = new Regulus.Utility.ConsoleViewer();
             var input = new Regulus.Utility.ConsoleInput(view);
@@ -42,11 +40,6 @@ namespace Server
 
             //關閉伺服器
             server.Shutdown();
-        }
-
-        static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
-        {
-            throw new NotImplementedException();
         }
     }
 }

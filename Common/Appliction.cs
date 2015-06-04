@@ -54,7 +54,6 @@ namespace Custom
          */
         bool Regulus.Utility.IUpdatable.Update()
         {
-            //傳回false系統將會停止
             return true;
         }
 
