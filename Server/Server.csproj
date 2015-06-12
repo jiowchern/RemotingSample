@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Server</RootNamespace>
     <AssemblyName>Server</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,20 +34,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
-      <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net35\protobuf-net.dll</HintPath>
     </Reference>
-    <Reference Include="RegulusLibrary, Version=1.0.5641.33202, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RegulusLibrary.0.0.13\lib\net35\RegulusLibrary.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="RegulusLibrary, Version=1.0.5611.16140, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RegulusLibrary.0.0.6\lib\net35\RegulusLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="RegulusRemoting, Version=1.0.5641.33202, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RegulusRemoting.0.0.13\lib\net35\RegulusRemoting.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="RegulusRemoting, Version=1.0.5625.24017, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RegulusRemoting.0.0.9\lib\net35\RegulusRemoting.dll</HintPath>
     </Reference>
-    <Reference Include="RegulusRemotingNativeSoul, Version=1.0.5641.33203, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RegulusRemotingServer.0.0.13\lib\net35\RegulusRemotingNativeSoul.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="RegulusRemotingNativeSoul, Version=1.0.5641.41001, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RegulusRemotingServer.0.0.14\lib\net35\RegulusRemotingNativeSoul.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
