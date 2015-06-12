@@ -34,26 +34,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
-      <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>
+      <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net35\protobuf-net.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RegulusLibrary, Version=1.0.5641.20624, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RegulusLibrary.0.0.12\lib\net35\RegulusLibrary.dll</HintPath>
+    <Reference Include="RegulusLibrary, Version=1.0.5641.33202, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RegulusLibrary.0.0.13\lib\net35\RegulusLibrary.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RegulusRemoting, Version=1.0.5641.23937, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RegulusRemoting.0.0.12\lib\net35\RegulusRemoting.dll</HintPath>
+    <Reference Include="RegulusRemoting, Version=1.0.5641.33202, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RegulusRemoting.0.0.13\lib\net35\RegulusRemoting.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RegulusRemotingNativeGhost, Version=1.0.5641.23937, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RegulusRemotingClient.0.0.14\lib\net35\RegulusRemotingNativeGhost.dll</HintPath>
+    <Reference Include="RegulusRemotingNativeGhost, Version=1.0.5641.33203, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RegulusRemotingClient.0.0.15\lib\net35\RegulusRemotingNativeGhost.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
