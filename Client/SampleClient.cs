@@ -21,8 +21,9 @@ namespace Client
             this._Command = command;
 
             _View.WriteLine("開始連線...");
-            _Agent.Connect("127.0.0.1", 12345).OnValue += _ConnectResult;
             _Agent.QueryNotifier<Custom.ISample>().Supply += _GetSample;
+            _Agent.Connect("127.0.0.1", 12345).OnValue += _ConnectResult;
+            
 
         }        
 
