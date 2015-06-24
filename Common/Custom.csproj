@@ -35,12 +35,12 @@
       <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net35\protobuf-net.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RegulusLibrary, Version=1.0.5646.33869, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RegulusLibrary.0.0.15\lib\net35\RegulusLibrary.dll</HintPath>
+    <Reference Include="RegulusLibrary, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RegulusLibrary.0.0.16\lib\net35\RegulusLibrary.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RegulusRemoting, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RegulusRemoting.0.0.16\lib\net35\RegulusRemoting.dll</HintPath>
+      <HintPath>..\packages\RegulusRemoting.0.0.17\lib\net35\RegulusRemoting.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
