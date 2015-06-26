@@ -13,12 +13,12 @@ namespace Test
         {
             _Messages = new List<string>(new [] 
             {
-                "有一位使用者加入",
-                "開始連線...",
-                "取得Sample...",
-                "輸入GetSeconds可以取得伺服器端物件的資料",
-                "取得Subtractor...",
-                "連線成功."
+                "There is a user to join.",
+                "Start connection...",
+                "Get Sample...",
+                "Enter GetSeconds can obtain information on server-side object",
+                "Get Subtractor...",
+                "Connection Success."
             });
         }
 

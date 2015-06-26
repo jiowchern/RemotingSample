@@ -20,7 +20,7 @@ namespace Client
             this._View = view;
             this._Command = command;
 
-            _View.WriteLine("開始連線...");
+            _View.WriteLine("Start connection...");
             _Agent.QueryNotifier<Custom.ISample>().Supply += _GetSample;
             _Agent.Connect("127.0.0.1", 12345).OnValue += _ConnectResult;
             
@@ -29,19 +29,19 @@ namespace Client
 
         void _GetSample(Custom.ISample sample)
         {
-            _View.WriteLine("取得Sample...");
+            _View.WriteLine("Get Sample...");
             sample.Add(1, 2).OnValue += (result) => { _View.WriteLine(string.Format("Add(1 , 2) == {0}", result)); };
             sample.GetSubtractor().OnValue += _GetSubtractor;
             _Sample = sample;
 
-            _View.WriteLine("輸入GetSeconds可以取得伺服器端物件的資料");
+            _View.WriteLine("Enter GetSeconds can obtain information on server-side object");
             _Command.Register("GetSeconds", () => { _View.WriteLine(string.Format("ElapsedSecond : {0}", _Sample.ElapsedSecond)); });
 
         }
 
         private void _GetSubtractor(Custom.ISubtractor subtractor)
         {
-            _View.WriteLine("取得Subtractor...");
+            _View.WriteLine("Get Subtractor...");
             subtractor.Sub(1, 2).OnValue += (result) => { _View.WriteLine(string.Format("Sub(1 , 2) == {0}", result)); };
         }
 
@@ -49,10 +49,10 @@ namespace Client
         {
             if (success)
             {
-                _View.WriteLine("連線成功.");                
+                _View.WriteLine("Connection Success.");                
             }                
             else
-                _View.WriteLine("連線失敗.");
+                _View.WriteLine("Connection Failed.");
         }
         
     }

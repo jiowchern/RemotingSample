@@ -10,33 +10,31 @@ namespace Client
     {
         static void Main(string[] args)
         {
-            // 展示用簡易控制台
+            // 範例用簡易控制台   
+            // example with a simple console
             var view = new Regulus.Utility.ConsoleViewer();
             var input = new Regulus.Utility.ConsoleInput(view);
             var console = new Regulus.Utility.Console(input, view);
-
-            // 建立代理者
+                
             var agent = Regulus.Remoting.Ghost.Native.Agent.Create();
 
             bool enable = true;
             console.Command.Register("quit", () => { enable = false; });
 
-            // 啟動代理器
             agent.Launch();
 
             // 自定義的客戶端邏輯
+            // Custom client logic
             var client = new SampleClient(agent, view, console.Command);
             
             while (enable)
-            {                
-                // 代理器更新
-                // 重要 : 需要呼叫他來刷新封包接收
+            {                                
+                // Important: call it to refresh the packet receive
                 agent.Update();
 
                 input.Update();
             }
-
-            // 關閉代理器
+            
             agent.Shutdown();            
         }
     }

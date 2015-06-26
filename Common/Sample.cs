@@ -7,8 +7,10 @@ using System.Text;
 namespace Custom
 {
     /// <summary>
-    /// 展示用遠端物件
+    /// 自定義實體
+    /// Custom entity
     /// 目前版本提供的所有支援類型
+    /// The current version provides all the support types
     /// </summary>
     public interface ISample
     {
@@ -16,27 +18,32 @@ namespace Custom
 
         /// <summary>
         /// 可以公開getter屬性伺服器端每段時間掃描更新。
-        /// 完全比較需求效能較高也因此建議少用(未來不排除移除該項功能，或其他實做方法解決)
+        /// You can open the getter property to the server side for each scan for updates.        
         /// </summary>
         float ElapsedSecond { get; }
         /// <summary>
         /// 方法展示
+        /// Methods
         /// 
-        /// 1.目前支援的型別為任何Protobuf可續列化的物件。
-        /// 2.傳回只支援Regulus.Remoting.Value，做異步資料傳送或接收。
+        /// 1.參數可帶入任何Protobuf支援的類型
+        ///   The parameters can be brought to support any type of Protobuf
+        /// 2.傳回只支援Regulus.Remoting.Value，做異步資料傳送。
+        ///   Returns the only support Regulus.Remoting.Value, do asynchronous data transfer.
         /// 
         /// </summary>
         /// <param name="num1"></param>
         /// <param name="num2"></param>
         /// <returns>        
         /// 將會傳回num1與num2的總和
+        /// Return the sum of num1 and num2
         /// </returns>
         Regulus.Remoting.Value<int> Add(int num1,int num2);
 
         /// <summary>
-        /// 傳回值可以帶入介面物件，參數目前不支援。
+        /// 可以傳回介面實體。
+        /// You can return the interface entity.
         /// </summary>
-        /// <returns>傳回ISubtractor</returns>
+        /// <returns>Return ISubtractor</returns>
         Regulus.Remoting.Value<ISubtractor> GetSubtractor();
     }
 }
