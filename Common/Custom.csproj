@@ -36,11 +36,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="RegulusLibrary, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RegulusLibrary.0.0.18\lib\net35\RegulusLibrary.dll</HintPath>
+      <HintPath>..\packages\RegulusLibrary.0.0.19\lib\net35\RegulusLibrary.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RegulusRemoting, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RegulusRemoting.0.0.19\lib\net35\RegulusRemoting.dll</HintPath>
+      <HintPath>..\packages\RegulusRemoting.0.0.20\lib\net35\RegulusRemoting.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
