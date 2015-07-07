@@ -46,7 +46,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="RegulusRemotingNativeGhost, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RegulusRemotingClient.0.0.23\lib\net35\RegulusRemotingNativeGhost.dll</HintPath>
+      <HintPath>..\packages\RegulusRemotingClient.0.0.24\lib\net35\RegulusRemotingNativeGhost.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
